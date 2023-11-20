@@ -1,0 +1,51 @@
+{
+  "manifestVersion": 1,
+  "id": "ai-pipeline",
+  "name": "AI Pipeline",
+  "version": "1.0.0",
+  "publisher": "serviceware",
+  "public": true,
+  "galleryFlags": [
+    "Preview"
+  ],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "AI Pipeline enhances debugging with integrated AI log analysis, offering swift issue resolution through context-specific hints, empowering developers to optimize pipeline workflows efficiently.",
+  "categories": ["Azure Pipelines"],
+  "tags": ["AI", "Log Analysis", "Debugging"],
+  "icons": {
+    "default": "images/ai-pipeline.png"
+  },
+  "links": {
+    "getstarted": {
+      "uri": "https://github.com/Serviceware/azure-devops-ai-pipeline/docs/getting-started.md"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/Serviceware/azure-devops-ai-pipeline"
+  },
+  "contributions": [
+    {
+      "id": "ai-pipeline",
+      "type": "ms.vss-distributed-task.task",
+      "targets": ["ms.vss-distributed-task.tasks"],
+      "properties": {
+        "name": "ai-pipeline"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "src"
+    },
+    {
+      "path": "node_modules/azure-devops-extension-sdk",
+      "addressable": true,
+      "packagePath": "lib"
+    }
+  ]
+}
