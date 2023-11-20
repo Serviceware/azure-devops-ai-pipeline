@@ -11,24 +11,28 @@ No one likes bugs. Report bugs [here](https://github.com/Serviceware/azure-devop
 - Folders: camelCase (myFolder)
 - Ts files: camelCase (myFile.ts)
 
-### To start the app, run
+### Commands:
 
-```sh
-yarn install
-yarn dev
-```
+1. dev
 
-### Run pseudo-prod locally
+  ```bash
+  npm run dev
+  ```
 
-```sh
-yarn prod
-```
+2. tests
 
-Open <http://localhost:7007>
+  ```bash
+  npm run test
+  ```
 
-## Update backstage and dependencies to latest version
+3. format
 
-```sh
-yarn update
-```
+  ```bash
+  npm run prettier:format
+  ```
 
+4. lint
+
+  ```bash
+  npm run lint
+  ```
