@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.0.18
+
+### Patch Changes
+
+- Fix conflicts at push
+
 ## 1.0.17
 
 ### Patch Changes
