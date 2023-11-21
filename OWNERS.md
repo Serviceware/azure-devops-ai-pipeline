@@ -3,8 +3,6 @@
 
 ## Core Maintainers
 
-Team: Platform Environment
-
 | Maintainer     | Email                                           | GitHub                                            |
 | -------------- | ----------------------------------------------- | ------------------------------------------------- |
 | Antonio Bergas | [antonio.bergas](mailto:antonio.bergas@pmcs.de) | [antoniobergas](https://github.com/antoniobergas) |
