@@ -5,10 +5,7 @@
   "friendlyName": "AI Pipeline",
   "description": "This Azure DevOps task streamlines pipeline debugging by integrating an AI log analysis system. It analyzes error logs, providing context-specific hints for swift issue resolution, empowering developers in optimizing their pipeline workflows.",
   "category": "Utility",
-  "runsOn": [
-    "Agent",
-    "DeploymentGroup"
-],
+  "runsOn": ["Agent", "DeploymentGroup"],
   "author": "Serviceware",
   "version": {
     "Major": 1,
@@ -17,18 +14,18 @@
   },
   "instanceNameFormat": "Echo $(samplestring)",
   "inputs": [
-      {
-          "name": "samplestring",
-          "type": "string",
-          "label": "Sample String",
-          "defaultValue": "",
-          "required": true,
-          "helpMarkDown": "A sample string"
-      }
+    {
+      "name": "samplestring",
+      "type": "string",
+      "label": "Sample String",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "A sample string"
+    }
   ],
   "execution": {
     "Node16": {
-        "target": "index.js"
+      "target": "dist/index.js"
     }
-}
+  }
 }
