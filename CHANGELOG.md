@@ -1,5 +1,17 @@
 # azure-devops-ai-pipeline
 
+## 1.0.17
+
+### Patch Changes
+
+- Improve content of the readme and link other docs
+
+## 1.0.16
+
+### Patch Changes
+
+- Improve info in readme file
+
 ## 1.0.15
 
 ### Patch Changes
