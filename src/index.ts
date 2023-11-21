@@ -7,7 +7,6 @@ async function run() {
       tl.setResult(tl.TaskResult.Failed, "Bad input was given");
       return;
     }
-    console.log("Hello", inputString);
   } catch (err: any) {
     tl.setResult(tl.TaskResult.Failed, err.message);
   }
