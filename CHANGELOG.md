@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.0.5
+
+### Patch Changes
+
+- Fix lint issues
+
 ## 1.0.4
 
 ### Patch Changes
