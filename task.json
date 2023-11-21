@@ -25,7 +25,7 @@
   ],
   "execution": {
     "Node16": {
-      "target": "dist/index.js"
+      "target": "index.js"
     }
   }
 }

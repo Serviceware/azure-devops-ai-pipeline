@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.0.4
+
+### Patch Changes
+
+- Fix an issue that tests are not compiled
+
 ## 1.0.3
 
 ### Patch Changes
