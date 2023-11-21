@@ -2,6 +2,10 @@
 
 Thank you for your interest in contributing to our project! This document provides guidelines and instructions for contributing.
 
+## Code of Conduct
+
+This project adheres to the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md). By participating, you are expected to honor this code.
+
 ## Bug Reports
 
 If you encounter any bugs, please report them [here](https://github.com/Serviceware/azure-devops-ai-pipeline/issues). Your reports help us improve the project.
