@@ -1,5 +1,23 @@
 # azure-devops-ai-pipeline
 
+## 1.0.15
+
+### Patch Changes
+
+- Fixed conventional commits image
+
+## 1.0.14
+
+### Patch Changes
+
+- Fixed conventional commits image
+
+## 1.0.13
+
+### Patch Changes
+
+- Fixed conventional commits image
+
 ## 1.0.12
 
 ### Patch Changes
