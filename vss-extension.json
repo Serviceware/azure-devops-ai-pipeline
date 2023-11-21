@@ -5,9 +5,7 @@
   "version": "1.0.0",
   "publisher": "serviceware",
   "public": true,
-  "galleryFlags": [
-    "Preview"
-  ],
+  "galleryFlags": ["Preview"],
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"

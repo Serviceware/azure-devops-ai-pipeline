@@ -5,6 +5,7 @@
 serviceware.*.vsix
 /src/**/*.js
 /tests/**/*.js
+/dist
 
 # Coverage directory used by tools like istanbul
 /coverage
