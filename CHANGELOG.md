@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.0.3
+
+### Patch Changes
+
+- Fixed error in changeset status command
+
 ## 1.0.2
 
 ### Patch Changes
