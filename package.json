@@ -1,10 +1,10 @@
 {
   "name": "azure-devops-ai-pipeline",
-  "version": "1.0.5",
+  "version": "1.0.12",
   "description": "This Azure DevOps task streamlines pipeline debugging by integrating an AI log analysis system. It analyzes error logs, providing context-specific hints for swift issue resolution, empowering developers in optimizing their pipeline workflows.",
   "main": "index.js",
   "scripts": {
-    "commit": "npm run prettier:format && changeset && changeset version && npm i && git add . && git commit -s -m ",
+    "commit": "npm run prettier:format && changeset && changeset version && npm i && git add . && oco",
     "dev": "tsc && node dist/index.js",
     "build": "tsc",
     "lint": "tslint --project tsconfig.json",
@@ -28,6 +28,7 @@
     "@types/mocha": "^10.0.4",
     "@types/node": "^20.9.2",
     "@types/q": "^1.5.8",
+    "commitlint-config-gitmoji": "^2.3.1",
     "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "prettier": "^3.1.0",
