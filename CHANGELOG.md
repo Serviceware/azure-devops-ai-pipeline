@@ -1,5 +1,23 @@
 # azure-devops-ai-pipeline
 
+## 1.3.0
+
+### Minor Changes
+
+- Migrated initial code and fix tslint issues
+
+## 1.2.0
+
+### Minor Changes
+
+- Migrated initial code and fix tslint issues
+
+## 1.1.0
+
+### Minor Changes
+
+- Migrated initial code and fix tslint issues
+
 ## 1.0.18
 
 ### Patch Changes
