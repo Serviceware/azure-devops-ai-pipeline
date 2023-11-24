@@ -14,7 +14,7 @@ To get started with the Azure DevOps AI Pipeline, follow the installation and us
 
 ## Contributing
 
-We welcome contributions from the community! To get involved, please read our [Contributing Guide](CONTRIBUTIN.md).
+We welcome contributions from the community! To get involved, please read our [Contributing Guide](CONTRIBUTING.md).
 
 ## Governance
 
