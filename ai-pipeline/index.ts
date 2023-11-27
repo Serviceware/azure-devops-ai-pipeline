@@ -1,5 +1,4 @@
 import { Configuration, OpenAIApi } from "openai";
-import { format } from "path";
 const tl = require("azure-pipelines-task-lib/task");
 const nodefetch = require("node-fetch");
 
@@ -20,16 +19,10 @@ async function run() {
     const projectId: string = tl.getInput("projectId", true);
     const buildId: string = tl.getInput("buildId", true);
     const azureToken: string = tl.getInput("azureToken", true);
-    const azureHost: string = tl.getInput("azureHost", true) || "dev.azure.com";
-    const startMessage: string =
-      tl.getInput("initialaizingMessage", true) ||
-      "🤖 AI Pipeline: Analizing your logs, please wait...";
-    const errorMessage: string =
-      tl.getInput("errorMessage", true) ||
-      "🤖 AI Pipeline: Failed to build pipeline, please check the logs at";
-    const responseMessage: string =
-      tl.getInput("responseMessage", true) ||
-      "🤖 AI Pipeline: Here are the steps to fix the issue:";
+    const azureHost: string = tl.getInput("azureHost", true);
+    const startMessage: string = tl.getInput("startMessage", true);
+    const errorMessage: string = tl.getInput("errorMessage", true);
+    const responseMessage: string = tl.getInput("responseMessage", true);
     const url = `https://${azureHost}/${projectId}/_apis/build/builds/${buildId}/Timeline`;
 
     console.log(`##[command]${startMessage}`);

@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.3.3
+
+### Patch Changes
+
+- Fixed error where dependencies where missing at run the task and expose default messages for configure
+
 ## 1.3.2
 
 ### Patch Changes

@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "ai-pipeline",
   "name": "AI Pipeline",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "publisher": "serviceware",
   "public": true,
   "galleryFlags": ["Preview"],
@@ -44,11 +44,6 @@
   "files": [
     {
       "path": "ai-pipeline"
-    },
-    {
-      "path": "node_modules/azure-devops-extension-sdk",
-      "addressable": true,
-      "packagePath": "lib"
     }
   ]
 }
