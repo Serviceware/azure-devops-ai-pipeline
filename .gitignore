@@ -3,7 +3,7 @@
 
 # Generate output
 serviceware.*.vsix
-/src/**/*.js
+/ai-pipeline/**/*.js
 /tests/**/*.js
 /dist
 

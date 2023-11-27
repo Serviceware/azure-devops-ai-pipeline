@@ -10,7 +10,7 @@ This Azure DevOps task integrates an AI log analysis system to streamline pipeli
 
 ## Getting Started
 
-To get started with the Azure DevOps AI Pipeline, follow the installation and usage instructions in our [User Guide](docs/getting-started.md).
+To get started with the Azure DevOps AI Pipeline, follow the installation and usage instructions in our [User Guide](overview.md).
 
 ## Contributing
 
