@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.3.1
+
+### Patch Changes
+
+- Fixed structure to match azdops extensions marketplace requirements
+
 ## 1.3.0
 
 ### Minor Changes
