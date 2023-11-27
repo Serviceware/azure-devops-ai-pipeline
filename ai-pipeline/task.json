@@ -9,8 +9,8 @@
   "author": "Serviceware",
   "version": {
     "Major": 1,
-    "Minor": 0,
-    "Patch": 0
+    "Minor": 3,
+    "Patch": 3
   },
   "inputs": [
     {
@@ -49,9 +49,33 @@
       "name": "azureHost",
       "type": "string",
       "label": "Azure Host",
-      "defaultValue": "",
+      "defaultValue": "dev.azure.com",
       "required": false,
       "helpMarkDown": "The host of the Azure DevOps instance."
+    },
+    {
+      "name": "startMessage",
+      "type": "string",
+      "label": "Start Message",
+      "defaultValue": "🤖 AI Pipeline: Analizing your logs, please wait...",
+      "required": false,
+      "helpMarkDown": "The message to be displayed when the task starts."
+    },
+    {
+      "name": "errorMessage",
+      "type": "string",
+      "label": "Error Message",
+      "defaultValue": "🤖 AI Pipeline: Analizing error in the next log",
+      "required": false,
+      "helpMarkDown": "The message to be displayed when the ai pipeline analizes the logs."
+    },
+    {
+      "name": "responseMessage",
+      "type": "string",
+      "label": "Response Message",
+      "defaultValue": "🤖 AI Pipeline: Here some hints to fix the issue:",
+      "required": false,
+      "helpMarkDown": "The message to be displayed when the ai pipeline returns the hints about the errors"
     }
   ],
   "execution": {

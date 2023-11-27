@@ -1,11 +1,12 @@
 # Dependency directories
 /node_modules
+/ai-pipeline/node_modules
 
 # Generate output
 serviceware.*.vsix
-/ai-pipeline/**/*.js
 /tests/**/*.js
-/dist
+/ai-pipeline/**/*.js
+.taskkey
 
 # Coverage directory used by tools like istanbul
 /coverage
