@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.3.2
+
+### Patch Changes
+
+- Added parameters to task and added new parameters for customize the messages
+
 ## 1.3.1
 
 ### Patch Changes

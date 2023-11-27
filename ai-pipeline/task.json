@@ -12,15 +12,46 @@
     "Minor": 0,
     "Patch": 0
   },
-  "instanceNameFormat": "Echo $(samplestring)",
   "inputs": [
     {
-      "name": "samplestring",
+      "name": "openAiApiKey",
       "type": "string",
-      "label": "Sample String",
+      "label": "Open AI API Key",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "A sample string"
+      "helpMarkDown": "A valid Open AI API key to access the Open AI API."
+    },
+    {
+      "name": "projectId",
+      "type": "string",
+      "label": "Project ID",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The ID of the project to which the pipeline belongs."
+    },
+    {
+      "name": "buildId",
+      "type": "string",
+      "label": "Build ID",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The ID of the run of the pipeline."
+    },
+    {
+      "name": "azureToken",
+      "type": "string",
+      "label": "Azure Token",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "A valid Azure token to access the Azure DevOps API."
+    },
+    {
+      "name": "azureHost",
+      "type": "string",
+      "label": "Azure Host",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "The host of the Azure DevOps instance."
     }
   ],
   "execution": {
