@@ -1,4 +1,5 @@
 import { Configuration, OpenAIApi } from "openai";
+import { format } from "path";
 const tl = require("azure-pipelines-task-lib/task");
 const nodefetch = require("node-fetch");
 
@@ -20,11 +21,18 @@ async function run() {
     const buildId: string = tl.getInput("buildId", true);
     const azureToken: string = tl.getInput("azureToken", true);
     const azureHost: string = tl.getInput("azureHost", true) || "dev.azure.com";
+    const startMessage: string =
+      tl.getInput("initialaizingMessage", true) ||
+      "🤖 AI Pipeline: Analizing your logs, please wait...";
+    const errorMessage: string =
+      tl.getInput("errorMessage", true) ||
+      "🤖 AI Pipeline: Failed to build pipeline, please check the logs at";
+    const responseMessage: string =
+      tl.getInput("responseMessage", true) ||
+      "🤖 AI Pipeline: Here are the steps to fix the issue:";
     const url = `https://${azureHost}/${projectId}/_apis/build/builds/${buildId}/Timeline`;
 
-    console.log(
-      `##[command]🤖 AI Pipeline: Analizing your logs, please wait...`,
-    );
+    console.log(`##[command]${startMessage}`);
 
     const fetchWithErrorHandling = async (
       requestUrl: string,
@@ -57,10 +65,8 @@ async function run() {
 
           const openAiResponse = await callOpenAiApi(logText, openAiApiKey);
 
-          console.log(
-            `##[error]🤖 AI Pipeline: Found errors in the next step => ${failedLog.log.url}, generating hints to fix them...`,
-          );
-          console.log(`##[section]🤖 AI Pipeline:`, openAiResponse);
+          console.log(`##[error]${errorMessage} => ${failedLog.log.url}`);
+          console.log(`##[section]${responseMessage}`, openAiResponse);
           console.log(
             `========================================================`,
           );
