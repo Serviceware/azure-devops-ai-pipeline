@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "ai-pipeline",
   "name": "AI Pipeline",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "publisher": "serviceware",
   "public": true,
   "galleryFlags": ["Preview"],
@@ -24,7 +24,7 @@
   },
   "links": {
     "getstarted": {
-      "uri": "https://github.com/Serviceware/azure-devops-ai-pipeline/docs/getting-started.md"
+      "uri": "https://github.com/Serviceware/azure-devops-ai-pipeline/README.md"
     }
   },
   "repository": {
