@@ -23,6 +23,7 @@ async function run() {
     const startMessage: string = tl.getInput("startMessage", true);
     const errorMessage: string = tl.getInput("errorMessage", true);
     const responseMessage: string = tl.getInput("responseMessage", true);
+    const prompt: string = tl.getInput("prompt", true);
     const url = `https://${azureHost}/${projectId}/_apis/build/builds/${buildId}/Timeline`;
 
     console.log(`##[command]${startMessage}`);
@@ -56,7 +57,11 @@ async function run() {
           const logData = await fetchWithErrorHandling(failedLog.log.url);
           const logText = await logData.text();
 
-          const openAiResponse = await callOpenAiApi(logText, openAiApiKey);
+          const openAiResponse = await callOpenAiApi(
+            logText,
+            openAiApiKey,
+            prompt,
+          );
 
           console.log(`##[error]${errorMessage} => ${failedLog.log.url}`);
           console.log(`##[section]${responseMessage}`, openAiResponse);
@@ -76,6 +81,7 @@ async function run() {
 async function callOpenAiApi(
   logText: string,
   openAiApiKey: string,
+  prompt: string,
 ): Promise<any> {
   const openAiConfiguration = new Configuration({
     apiKey: openAiApiKey,
@@ -87,8 +93,7 @@ async function callOpenAiApi(
     messages: [
       {
         role: "system",
-        content:
-          "Act as a knowledgeable CI/CD Engineer specializing in Azure DevOps pipelines. Always analyze the provided logs, identify the root cause of the issue, and respond with a clear, structured list of actions to resolve the problem. Maintain a professional and helpful tone throughout the conversation. Do you understand?",
+        content: prompt,
       },
       {
         role: "user",

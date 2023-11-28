@@ -10,7 +10,7 @@
   "version": {
     "Major": 1,
     "Minor": 3,
-    "Patch": 3
+    "Patch": 4
   },
   "inputs": [
     {
@@ -76,6 +76,14 @@
       "defaultValue": "🤖 AI Pipeline: Here some hints to fix the issue:",
       "required": false,
       "helpMarkDown": "The message to be displayed when the ai pipeline returns the hints about the errors"
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "label": "Prompt",
+      "defaultValue": "Act as a knowledgeable CI/CD Engineer specializing in Azure DevOps pipelines. Always analyze the provided logs, identify the root cause of the issue, and respond with a clear, structured list of actions to resolve the problem. Maintain a professional and helpful tone throughout the conversation. Do you understand?",
+      "required": false,
+      "helpMarkDown": "The prompt to be used by the ai pipeline to provide hints about the errors"
     }
   ],
   "execution": {
