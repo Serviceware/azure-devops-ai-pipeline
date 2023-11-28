@@ -20,18 +20,25 @@ You can find the changes notes for this task [here](https://github.com/Servicewa
 YAML snippet:
 
 ```yaml
-- task: ai-pipeline@1
-  inputs:
-    openAiApiKey: my-openai-api-key # Required
-    projectId: $(System.TeamProjectId) # Required, Azure DevOps Predefined variable
-    buildId: $(Build.BuildId) # Required, Azure DevOps Predefined variable
-    azureToken: $(System.AccessToken) # Required, Azure DevOps Predefined variable
-    azureHost: my-azure-host.com/my-org # Required
-    startMessage: "<A custom start message>" # Optional
-    errorMessage: "<A custom error message>" # Optional
-    responseMessage: "<A custom response message>" # Optional
-    prompt: "<A custom prompt>" # Optional
-    displayName: A display name
+jobs:
+  - job: <job name>
+    displayName: <display name for your job>
+    pool: <name of your pool>
+    dependsOn: <Name of the job you want to analize logs from>
+    condition: failed()
+    steps:
+      - task: ai-pipeline@1
+        inputs:
+          openAiApiKey: my-openai-api-key # Required
+          projectId: $(System.TeamProjectId) # Required, Azure DevOps Predefined variable
+          buildId: $(Build.BuildId) # Required, Azure DevOps Predefined variable
+          azureToken: $(System.AccessToken) # Required, Azure DevOps Predefined variable
+          azureHost: my-azure-host.com/my-org # Required
+          startMessage: <A custom start message> # Optional
+          errorMessage: <A custom error message> # Optional
+          responseMessage: <A custom response message> # Optional
+          prompt: <A custom prompt>" # Optional
+          displayName: A display name # Optional
 ```
 
 3. Configure the tasks to fit your needs.

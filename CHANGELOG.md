@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.3.7
+
+### Patch Changes
+
+- Improve overview yaml snippet and fix link to resources
+
 ## 1.3.6
 
 ### Patch Changes
