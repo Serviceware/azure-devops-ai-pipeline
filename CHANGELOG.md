@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.3.8
+
+### Patch Changes
+
+- Fixed resources link broken
+
 ## 1.3.7
 
 ### Patch Changes
