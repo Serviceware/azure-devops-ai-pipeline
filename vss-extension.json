@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "ai-pipeline",
   "name": "AI Pipeline",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "publisher": "serviceware",
   "public": true,
   "galleryFlags": ["Preview"],
