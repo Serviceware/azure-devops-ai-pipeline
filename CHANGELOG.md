@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.3.9
+
+### Patch Changes
+
+- Fixed missplaced parameter in snippet and refactor overview
+
 ## 1.3.8
 
 ### Patch Changes
