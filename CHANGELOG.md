@@ -1,5 +1,11 @@
 # azure-devops-ai-pipeline
 
+## 1.3.10
+
+### Patch Changes
+
+- Enhance overview with info about OpenAi API key and 429 error handling
+
 ## 1.3.9
 
 ### Patch Changes
