@@ -54,6 +54,22 @@
       "helpMarkDown": "The host of the Azure DevOps instance."
     },
     {
+      "name": "azureOrganization",
+      "type": "string",
+      "label": "Azure Organization",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The name of the Azure DevOps organization."
+    },
+    {
+      "name": "azureApiVersion",
+      "type": "string",
+      "label": "Azure API Version",
+      "defaultValue": "7.0",
+      "required": false,
+      "helpMarkDown": "The version of the Azure DevOps REST API to use."
+    },
+    {
       "name": "startMessage",
       "type": "string",
       "label": "Start Message",

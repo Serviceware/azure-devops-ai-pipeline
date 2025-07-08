@@ -6,5 +6,8 @@
     "allowSyntheticDefaultImports": true,
     "strict": false,
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "index.ts"
+  ]
 }
