@@ -11,5 +11,8 @@
     "azure-pipelines-task-lib": "^4.7.0",
     "node-fetch": "^2.6.6",
     "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10"
   }
 }

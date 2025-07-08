@@ -1,6 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
-const tl = require("azure-pipelines-task-lib/task");
-const nodefetch = require("node-fetch");
+import * as tl from "azure-pipelines-task-lib/task";
+import * as nodefetch from "node-fetch";
 
 interface IBuildTimeline {
   records: ILogRecord[];
@@ -19,12 +19,14 @@ async function run() {
     const projectId: string = tl.getInput("projectId", true);
     const buildId: string = tl.getInput("buildId", true);
     const azureToken: string = tl.getInput("azureToken", true);
-    const azureHost: string = tl.getInput("azureHost", true);
-    const startMessage: string = tl.getInput("startMessage", true);
-    const errorMessage: string = tl.getInput("errorMessage", true);
-    const responseMessage: string = tl.getInput("responseMessage", true);
-    const prompt: string = tl.getInput("prompt", true);
-    const url = `https://${azureHost}/${projectId}/_apis/build/builds/${buildId}/Timeline`;
+    const azureHost: string = tl.getInput("azureHost", false) || "dev.azure.com";
+    const azureOrganization: string = tl.getInput("azureOrganization", true);
+    const azureApiVersion: string = tl.getInput("azureApiVersion", false) || "7.0";
+    const startMessage: string = tl.getInput("startMessage", false) || "🤖 AI Pipeline: Analizing your logs, please wait...";
+    const errorMessage: string = tl.getInput("errorMessage", false) || "🤖 AI Pipeline: Analizing error in the next log";
+    const responseMessage: string = tl.getInput("responseMessage", false) || "🤖 AI Pipeline: Here some hints to fix the issue:";
+    const prompt: string = tl.getInput("prompt", false) || "Act as a knowledgeable CI/CD Engineer specializing in Azure DevOps pipelines. Always analyze the provided logs, identify the root cause of the issue, and respond with a clear, structured list of actions to resolve the problem. Maintain a professional and helpful tone throughout the conversation. Do you understand?";
+    const url = `https://${azureHost}/${azureOrganization}/${projectId}/_apis/build/builds/${buildId}/Timeline?api-version=${azureApiVersion}`;
 
     console.log(`##[command]${startMessage}`);
 
